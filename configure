@@ -987,9 +987,9 @@ if [ "$thread" = "posix" ]; then
 fi
 [ "$thread" != "no" ] && define HAVE_THREAD
 
-if cc_check "math.h" "-Werror" "return log2f(2);" ; then
-    define HAVE_LOG2F
-fi
+#if cc_check "math.h" "-Werror" "return log2f(2);" ; then
+#    define HAVE_LOG2F
+#fi
 
 if [ "$SYS" != "WINDOWS" ] && cpp_check "sys/mman.h unistd.h" "" "defined(MAP_PRIVATE)"; then
     define HAVE_MMAP
